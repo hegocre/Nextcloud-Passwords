@@ -77,6 +77,7 @@ fun NCPNavHost(
 
     val passwords by passwordsViewModel.passwords.observeAsState()
     val folders by passwordsViewModel.folders.observeAsState()
+    val shares by passwordsViewModel.shares.observeAsState()
     val keychain by passwordsViewModel.csEv1Keychain.observeAsState()
     val isRefreshing by passwordsViewModel.isRefreshing.collectAsState()
     val isUpdating by passwordsViewModel.isUpdating.collectAsState()

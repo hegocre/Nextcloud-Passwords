@@ -37,6 +37,8 @@ import com.hegocre.nextcloudpasswords.data.password.Password
 import com.hegocre.nextcloudpasswords.data.password.PasswordController
 import com.hegocre.nextcloudpasswords.data.password.UpdatedPassword
 import com.hegocre.nextcloudpasswords.data.serversettings.ServerSettings
+import com.hegocre.nextcloudpasswords.data.share.Share
+import com.hegocre.nextcloudpasswords.data.share.ShareController
 import com.hegocre.nextcloudpasswords.data.user.UserController
 import com.hegocre.nextcloudpasswords.utils.AppLockHelper
 import com.hegocre.nextcloudpasswords.utils.PreferencesManager
@@ -100,6 +102,8 @@ class PasswordsViewModel(application: Application) : AndroidViewModel(applicatio
         get() = PasswordController.getInstance(getApplication()).getPasswords()
     val folders: LiveData<List<Folder>>
         get() = FolderController.getInstance(getApplication()).getFolders()
+    val shares: LiveData<List<Share>>
+        get() = ShareController.getInstance(getApplication()).getShares()
 
     var visiblePassword = mutableStateOf<Pair<Password, List<String>>?>(null)
         private set
@@ -183,6 +187,7 @@ class PasswordsViewModel(application: Application) : AndroidViewModel(applicatio
                 _isRefreshing.emit(true)
                 PasswordController.getInstance(getApplication()).syncPasswords()
                 FolderController.getInstance(getApplication()).syncFolders()
+                ShareController.getInstance(getApplication()).syncShares()
                 _isRefreshing.emit(false)
             }
         } else {

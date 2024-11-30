@@ -55,6 +55,8 @@ import androidx.compose.ui.unit.dp
 import com.hegocre.nextcloudpasswords.R
 import com.hegocre.nextcloudpasswords.data.password.CustomField
 import com.hegocre.nextcloudpasswords.data.password.Password
+import com.hegocre.nextcloudpasswords.data.share.Share
+import com.hegocre.nextcloudpasswords.data.share.ShareUser
 import com.hegocre.nextcloudpasswords.ui.components.markdown.MDDocument
 import com.hegocre.nextcloudpasswords.ui.theme.ContentAlpha
 import com.hegocre.nextcloudpasswords.ui.theme.NextcloudPasswordsTheme
@@ -67,12 +69,14 @@ import org.commonmark.parser.Parser
 @Composable
 fun PasswordItem(
     passwordInfo: Pair<Password, List<String>>?,
+    shareInfo: Share?,
     modifier: Modifier = Modifier,
     onEditPassword: (() -> Unit)? = null,
 ) {
     passwordInfo?.let { pass ->
         PasswordItemContent(
             passwordInfo = pass,
+            shareInfo = shareInfo,
             onEditPassword = onEditPassword,
             modifier = modifier
         )
@@ -86,6 +90,7 @@ fun PasswordItem(
 @Composable
 fun PasswordItemContent(
     passwordInfo: Pair<Password, List<String>>,
+    shareInfo: Share?,
     onEditPassword: (() -> Unit)?,
     modifier: Modifier = Modifier
 ) {
@@ -198,6 +203,12 @@ fun PasswordItemContent(
                         .padding(bottom = 16.dp)
                         .padding(horizontal = 16.dp)
                 )
+            }
+
+            shareInfo?.let { shareInfo ->
+                item(key = "${password.id}_shareInfo") {
+                    Text(text = "Shared by ${shareInfo.owner.name}")
+                }
             }
 
             if (password.username.isNotBlank()) {
@@ -533,7 +544,7 @@ fun PasswordMarkdownField(
     }
 }
 
-@Preview
+@Preview(apiLevel = 34)
 @Composable
 fun PasswordItemPreview() {
     NextcloudPasswordsTheme {
@@ -569,6 +580,19 @@ fun PasswordItemPreview() {
                     created = 0,
                     updated = 0
                     ), listOf("Second", "Home")
+                ),
+                shareInfo = Share(
+                    id = "",
+                    created = 0,
+                    updated = 0,
+                    expires = null,
+                    editable = true,
+                    shareable = false,
+                    updatePending = false,
+                    password = "",
+                    owner = ShareUser("admin", "Admin"),
+                    receiver = ShareUser("admin2", "Admin2"),
+                    client = ""
                 ),
                 onEditPassword = {},
                 modifier = Modifier.padding(bottom = 16.dp)

@@ -15,6 +15,7 @@ import com.hegocre.nextcloudpasswords.data.password.DeletedPassword
 import com.hegocre.nextcloudpasswords.data.password.NewPassword
 import com.hegocre.nextcloudpasswords.data.password.Password
 import com.hegocre.nextcloudpasswords.data.password.UpdatedPassword
+import com.hegocre.nextcloudpasswords.data.share.Share
 import com.hegocre.nextcloudpasswords.data.user.UserController
 import com.hegocre.nextcloudpasswords.services.keepalive.KeepAliveWorker
 import com.hegocre.nextcloudpasswords.utils.Error
@@ -46,6 +47,7 @@ class ApiController private constructor(context: Context) {
     private val sessionApi = SessionApi.getInstance(server)
     private val serviceApi = ServiceApi.getInstance(server)
     private val settingsApi = SettingsApi.getInstance(server)
+    private val shareApi = ShareApi.getInstance(server)
 
     private var sessionCode: String? = null
 
@@ -254,6 +256,11 @@ class ApiController private constructor(context: Context) {
     suspend fun listFolders(): Result<List<Folder>> {
         if (!sessionOpen.value) return Result.Error(Error.API_NO_SESSION)
         return foldersApi.list(sessionCode)
+    }
+
+    suspend fun listShares(): Result<List<Share>> {
+        if (!sessionOpen.value) return Result.Error(Error.API_NO_SESSION)
+        return shareApi.list(sessionCode)
     }
 
     /**
