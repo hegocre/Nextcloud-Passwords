@@ -1,5 +1,5 @@
-- Folder path is now displayed on the password details
-- Support predictive back gesture on Android U+
-- Make notes text selectable
-- Usage improvements
-- Library updates and bug fixes
+- Se muestra la ruta de una contraseña en la vista detallada
+- Soporte para el gesto de retroceso predictivo en Android U y superiores
+- Las notas de una contraseña se pueden seleccionar
+- Mejoras de uso
+- Actualización de librerías y corrección de errores

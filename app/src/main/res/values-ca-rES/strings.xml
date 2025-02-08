@@ -120,4 +120,8 @@
     <string name="search_by_username_preference_title">Cerca per usuari</string>
     <string name="search_by_username_preference_subtitle">Cercar contrasenyes pel nom d\'usuari</string>
     <string name="action_save_autofill">Desar i emplenar</string>
+    <string name="error_invalid_password">Contrasenya invàlida</string>
+    <string name="preferences_category_search">Cerca</string>
+    <string name="use_strict_domain_matching_preference_title">Domini estricte</string>
+    <string name="use_strict_domain_matching_preference_subtitle">Fer coincidir les contrasenyes pel domini complet, excloent-hi subdominis</string>
 </resources>

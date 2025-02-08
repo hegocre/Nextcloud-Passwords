@@ -121,4 +121,5 @@
     <string name="search_by_username_preference_subtitle">利用使用者名稱搜尋密碼</string>
     <string name="action_save_autofill">儲存並自動填入</string>
     <string name="error_invalid_password">無效的密碼</string>
+    <string name="preferences_category_search">搜尋</string>
 </resources>

@@ -115,4 +115,5 @@
     <string name="empty_list_no_results_found">Pas de résultat trouvé</string>
     <string name="action_search_everywhere">Rechercher partout</string>
     <string name="contribute">Contribuer</string>
+    <string name="preferences_category_search">Recherche</string>
 </resources>

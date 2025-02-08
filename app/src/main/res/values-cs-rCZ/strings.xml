@@ -117,4 +117,5 @@
     <string name="contribute">Přispět</string>
     <string name="inline_autofill_preference_title">Použít inline automatické vyplňování</string>
     <string name="inline_autofill_preference_subtitle">Zobrazit návrhy automatického vyplňování na klávesnici, pokud je podporováno</string>
+    <string name="preferences_category_search">Vyhledat</string>
 </resources>

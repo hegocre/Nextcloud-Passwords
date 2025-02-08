@@ -117,4 +117,5 @@
     <string name="contribute">Внести свой вклад</string>
     <string name="inline_autofill_preference_title">Использовать автозаполнение при печати</string>
     <string name="inline_autofill_preference_subtitle">Показывать подсказки автозаполнения на клавиатуре, когда это возможно</string>
+    <string name="preferences_category_search">Поиск</string>
 </resources>

@@ -120,4 +120,8 @@
     <string name="search_by_username_preference_title">Search by username</string>
     <string name="search_by_username_preference_subtitle">Search passwords by the username value</string>
     <string name="action_save_autofill">Save and autofill</string>
+    <string name="error_invalid_password">Invalid password</string>
+    <string name="preferences_category_search">Search</string>
+    <string name="use_strict_domain_matching_preference_title">Strict domain matching</string>
+    <string name="use_strict_domain_matching_preference_subtitle">Match passwords by its full domain, excluding subdomains</string>
 </resources>

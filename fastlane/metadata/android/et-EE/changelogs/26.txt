@@ -1,4 +1,4 @@
-inParandatud Pin'i paigutus mittevertikaalsetel orientatsioonidel
+Parandatud pin'i paigutus mittevertikaalsetel orientatsioonidel
 Parandatud viga otsingusse osade sümbolite kirjutamisel
 Mäleta viimati kasutad parooli genereerimise sätteid
 Luba realise automaattäite välja lülitamine

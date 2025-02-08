@@ -120,4 +120,8 @@
     <string name="search_by_username_preference_title">Búsqueda por usuario</string>
     <string name="search_by_username_preference_subtitle">Buscar contraseñas por el nombre de usuario</string>
     <string name="action_save_autofill">Guardar y autocompletar</string>
+    <string name="error_invalid_password">Contraseña inválida</string>
+    <string name="preferences_category_search">Buscar</string>
+    <string name="use_strict_domain_matching_preference_title">Dominio estricto</string>
+    <string name="use_strict_domain_matching_preference_subtitle">Hacer coincidir las contraseñas por su dominio completo, excluyendo subdominios</string>
 </resources>

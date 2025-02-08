@@ -1,5 +1,5 @@
-- Allow searching by username
-- Allow adding passwords when autofilling
-- Added Czech, Russian and Chinese Traditional translations
+- Permet cercar per usuari
+- Permet crear contrasenyes durant l'autocompletat
+- Afegides les traduccions per txec, rus i xinès tradicional
 - Retocs visuals
-- Internal improvements and bug fixes
+- Millores internes i correcció d'errors

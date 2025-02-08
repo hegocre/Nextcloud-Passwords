@@ -121,4 +121,7 @@
     <string name="search_by_username_preference_subtitle">Passwörter nach Benutzername suchen</string>
     <string name="action_save_autofill">Speichern und AutoAusfüllen</string>
     <string name="error_invalid_password">Ungültiges Passwort</string>
+    <string name="preferences_category_search">Suche</string>
+    <string name="use_strict_domain_matching_preference_title">Strikte Domänen-Übereinstimmung</string>
+    <string name="use_strict_domain_matching_preference_subtitle">Passwörter nach der vollständigen Domain abgleichen, ohne Subdomains</string>
 </resources>

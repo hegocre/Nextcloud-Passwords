@@ -121,4 +121,7 @@
     <string name="search_by_username_preference_subtitle">Otsi paroole kasutajanime järgi</string>
     <string name="action_save_autofill">Salvesta ja täida automaatselt</string>
     <string name="error_invalid_password">Vale parool</string>
+    <string name="preferences_category_search">Otsing</string>
+    <string name="use_strict_domain_matching_preference_title">Range domeeni sobitamine</string>
+    <string name="use_strict_domain_matching_preference_subtitle">Sobita paroole nende terve domeeniga, välja arvatud alamdomeenid</string>
 </resources>
